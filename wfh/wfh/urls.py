@@ -19,6 +19,8 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-
+    url(r'^api-auth/', include('rest_framework.urls',
+                               namespace='rest_framework')),
     url(r'^api/team/', include("team.api.urls", namespace='team-api')),
+    url(r'^api/wfh/', include("wfhapp.api.urls", namespace='wfh-api')),
 ]

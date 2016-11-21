@@ -16,5 +16,7 @@ Rest-APIs for WorkFromHomeManager Application
       127.0.0.1:8000/api/team - 
       Similarly for all other APIs.
 Don't Use Live API Endpoint available in /docs as its still in Beta.
+7. Use admin dashboard to add data. 127.0.0.1:8000/admin
+    Use credentials tushar/Admin@123
 
 Happy Coding!....

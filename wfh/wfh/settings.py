@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'team',
     'wfhapp',
+    'rest_framework_docs',
 ]
 
 MIDDLEWARE_CLASSES = [

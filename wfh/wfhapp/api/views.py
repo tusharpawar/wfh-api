@@ -14,6 +14,7 @@ from rest_framework.generics import(
 	RetrieveUpdateAPIView,
 	CreateAPIView,
 	DestroyAPIView,
+	RetrieveDestroyAPIView
 	)
 
 #pagination
@@ -67,9 +68,11 @@ class WFHUpdateAPIView(RetrieveUpdateAPIView):
 	serializer_class = WFHCreateUpdateSerializer
 	permission_classes = [IsOwner]
 	lookup_field = 'id'
+	#send_email_confirmation
 
-class WFHDeleteAPIView(DestroyAPIView):
+class WFHDeleteAPIView(RetrieveDestroyAPIView):
 	queryset = WFH.objects.all()
 	serializer_class = WFHDetailSerializer
 	permission_classes = [IsOwner]
+	allowed_methods = ['GET','DELETE']
 	lookup_field = 'id'

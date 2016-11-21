@@ -21,6 +21,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
+    #url for team-api
     url(r'^api/team/', include("team.api.urls", namespace='team-api')),
+
+    #url for wfh-api
     url(r'^api/wfh/', include("wfhapp.api.urls", namespace='wfh-api')),
+
+    #url for drf_docs
+    url(r'^docs/',include('rest_framework_docs.urls')),
 ]
